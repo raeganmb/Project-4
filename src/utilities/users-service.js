@@ -10,8 +10,8 @@ export async function signUp(userData) {
   return getUser();
 }
 
-export async function login(userData){
-  const token = await usersAPI.login(userData)
+export async function login(userData) {
+  const token = await usersAPI.login(userData);
   localStorage.setItem("token", token);
   return getUser();
 }
@@ -36,9 +36,4 @@ export function getUser() {
 
 export function logOut() {
   localStorage.removeItem("token");
-}
-
-export function checkToken() {
-  return usersAPI.checkToken()
-  .then(dateStr => new Date(dateStr));
 }

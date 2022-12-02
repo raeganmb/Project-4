@@ -26,11 +26,6 @@ async function login(req, res) {
   }
 }
 
-function checkToken(req, res) {
-  console.log("req.user ---->", req.user);
-  res.json(req.exp);
-}
-
 function createJWT(user) {
   return jwt.sign({ user }, process.env.SECRET, { expiresIn: "24h" });
 }
@@ -38,5 +33,4 @@ function createJWT(user) {
 module.exports = {
   create,
   login,
-  checkToken,
 };
