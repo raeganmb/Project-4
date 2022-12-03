@@ -1,31 +1,34 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const gallerySchema = require('./gallery')
-const bcrypt = require("bcrypt")
+const gallerySchema = require("./gallery");
+const bcrypt = require("bcrypt");
 
-const artworkSchema = new Schema({
-    name: {type: String, required: true},
-    email: {
+const artworkSchema = new Schema(
+  {
+    artwork: {
       type: String,
-      unique: true,
-      trim: true,
-      lowercase: true,
-      required: true
+      required: true,
     },
-    password: {
+    gallery: {
+      type: Schema.Types.ObjectId,
+      ref: "Gallery",
+      required: true,
+    },
+    gene: {
       type: String,
-      trim: true,
-      minLength: 3,
-      required: true
-    }
-}, {
-  timestamps: true,
-  toJSON: {
-    transform: function(doc, ret) {
-      delete ret.password;
-      return ret;
-    }
+      required: true,
+    },
+    artist: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
   }
-});
+);
 
-module.exports = mongoose.model('Artwork', artworkSchema);
+module.exports = mongoose.model("Artwork", artworkSchema);
