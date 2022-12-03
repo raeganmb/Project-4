@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.authTitle {
+  font-weight: 600;
+  align-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 57.88px;
+  line-height: 24.6px;
+  letter-spacing: -0.72px;
+}
