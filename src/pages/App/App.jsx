@@ -5,6 +5,8 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import "./App.css";
 import GalleryPage from "../GalleryPage/GalleryPage";
+import SignUpPage from "../SignUpPage/SignUpPage";
+import LoginPage from "../LoginPage/LoginPage";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
 
 function App() {
@@ -16,13 +18,23 @@ function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/" element={<p>Logged In</p>} />
+              <Route path="/" element={<h2>Home Page</h2>} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/collections" element={<MyCollectionsPage />} />
             </Routes>
           </>
         ) : (
-          <AuthPage setUser={setUser} />
+          <>
+            <AuthPage />
+            <Routes>
+              <Route path="/" element={<h2>Please Sign Up or Login</h2>} />
+              <Route
+                path="/signup"
+                element={<SignUpPage setUser={setUser} />}
+              />
+              <Route path="/login" element={<LoginPage setUser={setUser} />} />
+            </Routes>
+          </>
         )}
       </main>
     </>

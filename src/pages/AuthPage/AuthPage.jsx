@@ -1,8 +1,9 @@
 import React from "react";
 // import SignUpForm from "../../components/SignUpForm/SignUpForm";
-// import LoginForm from "../../components/LoginForm/LoginForm"
+// import LoginForm from "../../components/LoginForm/LoginForm";
+import { Link } from "react-router-dom";
 
-export default function AuthPage({ setUser }) {
+export default function AuthPage() {
   return (
     <main className="authContainer">
           <h1 className="authTitle">Artspiration</h1>
@@ -10,12 +11,9 @@ export default function AuthPage({ setUser }) {
             <img src="" alt="" />
           </div>
           <div className="authBtnContatiner">
-            <button className="signUpBtn">Sign Up</button>
-            <button className="logInBtn">Log In</button>
+            <button className="signUpBtn"> <Link to="/signup">Sign Up</Link></button>
+            <button className="logInBtn"><Link to="/login">Log In</Link></button>
           </div>
-      {/* <SignUpForm setUser={setUser} />
-      <LoginForm setUser={setUser} /> */}
-    
     </main>
   );
 }
