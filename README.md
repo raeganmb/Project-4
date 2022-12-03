@@ -17,7 +17,7 @@ We hope you also enjoy suggested pieces of art based on your searches and collec
 
 ## Authors
 
-- CJ Paj
+- CJ Pak
 - Naser 
 - Raegan Boucher
 - Saad Khan
