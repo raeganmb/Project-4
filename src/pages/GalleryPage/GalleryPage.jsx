@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function GalleryPage() {
-  return <div>Art Gallery</div>;
+  return (
+    <>
+      <div>Art Gallery</div>
+    </>
+  );
 }
