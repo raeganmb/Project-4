@@ -1,13 +1,13 @@
 import React from "react";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import LoginForm from "../../components/LoginForm/LoginForm"
+import LoginForm from "../../components/LoginForm/LoginForm";
+import { Link } from "react-router-dom";
 
-export default function AuthPage({ setUser }) {
+export default function AuthPage() {
   return (
-    <>
-      <h1>AuthPage</h1>
-      <SignUpForm setUser={setUser} />
-      <LoginForm setUser={setUser} />
-    </>
+    <nav>
+      <Link to="/signup">Sign Up</Link>
+      <Link to="/login">Log In</Link>
+    </nav>
   );
 }
