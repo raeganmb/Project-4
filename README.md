@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://ibb.co/pyHfddS" width="500">
+</p>
+
 # Artspiration
 
 Welcome to Artspiration, your personal virtual art gallery!
