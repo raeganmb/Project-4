@@ -1,0 +1,48 @@
+/* MOBILE */
+
+body {
+  background-color: #f6eaea;
+  font-family: "Roboto";
+  font-size: 10pt;
+  /* background: url("https://i.ibb.co/4FRhKRt/Screen-Shot-2022-12-05-at-12-42-18-PM.png") no-repeat center;
+    background-size: cover; */
+}
+
+.authTitle {
+  font-weight: 600;
+  align-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 57.88px;
+  line-height: 24.6px;
+  text-align: center;
+  letter-spacing: -0.723549px;
+  color: #000000;
+  text-shadow: 0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
+  padding-top: 111px;
+  padding-bottom: 85px;
+}
+
+.authBtnContatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.authBtnContatiner button {
+  background-color: #e6c783;
+  border: 1.4471px solid #000000;
+  box-shadow: 0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
+  width: 195.36px;
+  height: 62.23px;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 31.8362px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.723549px;
+  color: #000000;
+  text-decoration: none;
+}
