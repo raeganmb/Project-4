@@ -22,3 +22,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# example json objects
+
+**/ex*.json
+
+# debug files
+**/debug*
+**/log_console.js
+
+**/*.test.js
