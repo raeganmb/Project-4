@@ -4,8 +4,8 @@ body {
   background-color: #f6eaea;
   font-family: "Roboto";
   font-size: 10pt;
-  /* background: url("https://i.ibb.co/4FRhKRt/Screen-Shot-2022-12-05-at-12-42-18-PM.png") no-repeat center;
-    background-size: cover; */
+  background: url("https://i.ibb.co/4FRhKRt/Screen-Shot-2022-12-05-at-12-42-18-PM.png") no-repeat center;
+background-size: cover;
 }
 
 .authTitle {
