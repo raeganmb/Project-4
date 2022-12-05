@@ -1,8 +1,10 @@
 const axios = require("axios");
 const logger = require("./log_console");
-
-const clientID = "db9291e3c57a14947867";
-const clientSecret = "5917d3fcd83574491ab9c11c753c864e";
+require("dotenv").config();
+// TODO
+// Remove ids and secret from prod
+const clientID = process.env.ARTSY_CLIENTID;
+const clientSecret = process.env.ARTSY_CLIENTSECRET;
 const tokenURL = "https://api.artsy.net/api/tokens/xapp_token";
 
 class ArtClient {
@@ -79,10 +81,12 @@ class ArtClient {
 		});
 
 		if (params.artwork_id) {
-			return resp.data;
+			return this.parseArtwork(resp.data);
 		}
 
-		return resp._embedded.artworks;
+		// TODO
+		// map object with parsing
+		return resp._embedded.artworks.map(this.parseArtwork);
 	}
 
 	async getArtist(params) {
@@ -95,10 +99,10 @@ class ArtClient {
 		});
 
 		if (params.artist_id) {
-			return resp.data;
+			return this.parseArtist(resp.data);
 		}
 
-		return resp.data._embedded.artists;
+		return resp.data._embedded.artists.map(this.parseArtist);
 	}
 
 	async getGenes(params) {
@@ -144,7 +148,7 @@ class ArtClient {
 	}
 
 	parseArtist(artist) {
-		res = {};
+		let res = {};
 
 		res.id = artist.id;
 		res.name = artist.name;
@@ -152,7 +156,7 @@ class ArtClient {
 	}
 
 	parseArtwork(artwork) {
-		res = {};
+		let res = {};
 
 		res.id = artwork.id;
 		res.title = artwork.title;
@@ -178,24 +182,3 @@ const client = new ArtClient();
 module.exports = {
 	client,
 };
-// export const artsyClient = ArtsyClient();
-// export default artsyClient;
-
-/*
-    EndPoints
-    - Artwork
-    - Artist
-    - Search
-
-    Keys
-    - artist_id
-    - artwork_id
-
-    
-    Artist -> Artwork: query Artwork with param artist_id
-    Artwork -> Artist: query Artist with param artwork_id
-
-    
-
-
-*/
