@@ -19,7 +19,6 @@ body {
   color: #000000;
   text-shadow: 0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
   padding-top: 111px;
-  padding-bottom: 85px;
 }
 
 .authBtnContatiner {
@@ -29,7 +28,7 @@ body {
   align-items: center;
   padding-top: 35px;
   padding-bottom: 15px;
-  margin-top: 325px;
+  margin-top: 390px;
 }
 
 .authBtnContatiner button {
@@ -49,3 +48,4 @@ body {
   text-decoration: none;
   border-radius: 10px;
 }
+
