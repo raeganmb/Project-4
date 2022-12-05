@@ -48,7 +48,7 @@ letter-spacing: -0.723549px;
 color: #000000;
 text-shadow: 0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
 padding-top: 111px;
-padding-bottom: 118px;
+padding-bottom: 85px;
 }
 
 .authBtnContatiner {
@@ -56,4 +56,23 @@ padding-bottom: 118px;
   flex-direction: column;
   justify-content: center;
   align-items: center;  
+  padding-top: 35px;
+}
+
+.authBtnContatiner button {
+  background-color: #E6C783;
+  border: 1.4471px solid #000000;
+  box-shadow: 0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
+  width: 195.36px;
+height: 62.23px;
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 31.8362px;
+line-height: 25px;
+/* or 77% */
+text-align: center;
+letter-spacing: -0.723549px;
+color: #000000;
+text-decoration: none;
 }
