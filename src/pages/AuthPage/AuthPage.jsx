@@ -1,6 +1,5 @@
 import React from "react";
-// import SignUpForm from "../../components/SignUpForm/SignUpForm";
-// import LoginForm from "../../components/LoginForm/LoginForm";
+
 import { Link } from "react-router-dom";
 import "./AuthPage.css";
 

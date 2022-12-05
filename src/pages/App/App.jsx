@@ -5,8 +5,8 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import "./App.css";
 import GalleryPage from "../GalleryPage/GalleryPage";
-import SignUpPage from "../SignUpPage/SignUpPage";
-import LoginPage from "../LoginPage/LoginPage";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
+import LoginForm from "../../components/LoginForm/LoginForm";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
 
 function App() {
@@ -29,9 +29,9 @@ function App() {
             <Routes>
               <Route
                 path="/signup"
-                element={<SignUpPage setUser={setUser} />}
+                element={<SignUpForm />}
               />
-              <Route path="/login" element={<LoginPage setUser={setUser} />} />
+              <Route path="/login" element={<LoginForm />} />
             </Routes>
           </>
         )}
