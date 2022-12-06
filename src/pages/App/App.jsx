@@ -8,6 +8,8 @@ import GalleryPage from "../GalleryPage/GalleryPage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
+import HomePage from "../HomePage/HomePage";
+import DetailsPage from "../DetailsPage/DetailsPage";
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -18,9 +20,11 @@ function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/" element={<h2>Home Page</h2>} />
+              <Route path="/" />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/collections" element={<MyCollectionsPage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/details" element={<DetailsPage />} />
             </Routes>
           </>
         ) : (
