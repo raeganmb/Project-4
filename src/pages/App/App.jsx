@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
@@ -8,15 +8,16 @@ import GalleryPage from "../GalleryPage/GalleryPage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
+// import { Router } from "express";
 
 function App() {
-  const [user, setUser] = useState(getUser());
+  const [user, setUser] = useState({});
   return (
     <>
       <main className="App">
         {user ? (
           <>
-            <NavBar user={user} setUser={setUser} />
+            <NavBar user={user} setUser={(setUser)} />
             <Routes>
               <Route path="/" element={<h2>Home Page</h2>} />
               <Route path="/gallery" element={<GalleryPage />} />
@@ -26,10 +27,10 @@ function App() {
         ) : (
           <>
             <AuthPage />
-            <Routes>
+              <Routes>
               <Route path="/signup" element={<SignUpForm />} />
               <Route path="/login" element={<LoginForm />} />
-            </Routes>
+              </Routes>
           </>
         )}
       </main>

@@ -5,7 +5,7 @@ import "./AuthPage.css";
 export default function AuthPage() {
   return (
     <>
-      <main>
+      <main className="authPage">
         <div className="authContainer">
           <h1 className="authTitle">Artspiration.</h1>
           <div className="welcomemsg">
