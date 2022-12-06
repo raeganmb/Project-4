@@ -7,7 +7,6 @@ export async function signUp(userData) {
   const token = await usersAPI.signUp(userData);
   // Baby step by returning whatever is sent back by the server
   //the name of the key is in ''
-  console.log(token);
   localStorage.setItem("token", token);
   return getUser();
 }

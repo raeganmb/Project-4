@@ -31,8 +31,11 @@ function App() {
           <>
             <AuthPage />
             <Routes>
-              <Route path="/signup" element={<SignUpForm />} />
-              <Route path="/login" element={<LoginForm />} />
+              <Route
+                path="/signup"
+                element={<SignUpForm setUser={setUser} />}
+              />
+              <Route path="/login" element={<LoginForm setUser={setUser} />} />
             </Routes>
           </>
         )}
