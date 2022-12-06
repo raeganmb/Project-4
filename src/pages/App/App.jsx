@@ -8,6 +8,8 @@ import GalleryPage from "../GalleryPage/GalleryPage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
+import LoginPage from "../LoginPage/LoginPage";
+import SignUpPage from "../SignUpPage/SignUpPage";
 
 
 function App() {
@@ -26,10 +28,10 @@ function App() {
           </>
         ) : (
           <>
-            <AuthPage />
               <Routes>
-              <Route path="/signup" element={<SignUpForm />} />
-              <Route path="/login" element={<LoginForm />} />
+              <Route path="/" element={<AuthPage />} />
+              <Route path="/signup" element={<SignUpPage />} />
+              <Route path="/login" element={<LoginPage />} />
               </Routes>
           </>
         )}
