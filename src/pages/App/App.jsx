@@ -8,10 +8,10 @@ import GalleryPage from "../GalleryPage/GalleryPage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
-// import { Router } from "express";
+
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(getUser());
   return (
     <>
       <main className="App">
