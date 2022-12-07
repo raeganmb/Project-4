@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BenchFooter from "../../components/BenchFooter/BenchFooter";
 import "./AuthPage.css";
 
 export default function AuthPage() {
@@ -28,6 +29,7 @@ export default function AuthPage() {
             </>
           </div>
         </>
+        <BenchFooter />
       </main>
     </>
   );

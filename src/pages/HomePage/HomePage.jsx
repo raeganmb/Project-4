@@ -1,6 +1,6 @@
 import React from "react";
-const axios = require("axios");
 import * as apiService from "../../utilities/artsy-api-service";
+const axios = require("axios");
 
 export default function HomePage() {
   return (
