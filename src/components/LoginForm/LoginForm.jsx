@@ -3,7 +3,9 @@
 import { useState } from "react";
 import * as usersService from "../../utilities/users-service";
 
-export default function LoginForm({ setUser }) {
+export default function LoginForm(props) {
+
+
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
@@ -23,7 +25,7 @@ export default function LoginForm({ setUser }) {
       // will resolve to the user object included in the
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
-      setUser(user);
+      props.setUser(user);
     } catch (err) {
       console.log(err);
       setError("Log In Failed - Try Again");
@@ -32,6 +34,8 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
+      {props.show ? 
+      <>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
@@ -52,8 +56,10 @@ export default function LoginForm({ setUser }) {
           />
           <button type="submit">LOG IN</button>
         </form>
+          <button onClick={props.onClose}>Cancel</button>
       </div>
       <p className="error-message">&nbsp;{error}</p>
+      </> : null }
     </div>
   );
 }

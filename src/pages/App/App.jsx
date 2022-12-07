@@ -29,14 +29,14 @@ function App() {
           </>
         ) : (
           <>
-            <AuthPage />
-            <Routes>
+            <AuthPage setUser={setUser} />
+            {/* <Routes>
               <Route
                 path="/signup"
                 element={<SignUpForm setUser={setUser} />}
               />
               <Route path="/login" element={<LoginForm setUser={setUser} />} />
-            </Routes>
+            </Routes> */}
           </>
         )}
       </main>
