@@ -15,10 +15,13 @@ app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));
 app.use("/api/users", require("./routes/api/users"));
 
+// routers
+// const artistRouter = require("./routes/artist");
+// const galleryRouter = require("./routes/gallery");
+const artworkRouter = require("./routes/artwork");
+
 // App routes
-app.get("/artists", () => {});
-app.get("/artwork", () => {});
-app.get("/gallery", () => {});
+app.use("/artwork", artworkRouter);
 
 // Client serving
 app.get("/*", function (req, res) {
