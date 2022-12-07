@@ -4,19 +4,13 @@ const controller = "ARTWORK";
 
 // get artwork data as json
 async function getArtwork(req, resp, next) {
-	if (req.params.artwork_id != "artwork_id") {
-		var result = {
-			controller: controller,
-			url: req.originalUrl,
-			params: req.params,
-		};
-	} else {
-		let params = {
+	if (req.params.artwork_id === "artwork_id") {
+		var params = {
 			artwork_id: "516dfb9ab31e2b2270000c45",
 		};
-
-		var result = await API.getArtwork(params);
 	}
+
+	var result = await API.getArtwork(params);
 	resp.send(result);
 }
 
@@ -28,12 +22,14 @@ async function saveArtwork(req, res, next) {
 	});
 }
 
-async function getRandomArtwork(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
+async function getRandomArtwork(req, resp, next) {
+	let params = {
+		offset: Math.floor(Math.random() * 50),
+	};
+	console.log(params);
+	let result = await API.getArtwork(params);
+	console.log(result);
+	resp.send(result);
 }
 
 module.exports = {
