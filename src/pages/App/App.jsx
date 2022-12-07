@@ -29,7 +29,7 @@ function App() {
           </>
         ) : (
           <>
-            <AuthPage />
+            <AuthPage setUser={setUser} />
             <Routes>
               <Route
                 path="/signup"

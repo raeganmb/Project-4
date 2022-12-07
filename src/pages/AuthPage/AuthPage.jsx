@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./AuthPage.css";
-import LoginModal from "../../components/Modal/LoginModal";
+// import LoginModal from "../../components/Modal/LoginModal";
 import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
 export default function AuthPage(props) {
   const [show, setShow] = useState(false)
   function showModal() {
-  setShow(show = !show)
+  setShow(show => !show)
   }
 
-  function closeModal() {
-    setShow(show = !show)
-  }
+  // function closeModal() {
+  //   setShow(show = !show)
+  // }
 
   return (
     <>
@@ -26,6 +26,7 @@ export default function AuthPage(props) {
         </div>
 
         <>
+        {!show ?
           <div>
             <>
               <div className="authBtnContatiner">
@@ -33,9 +34,10 @@ export default function AuthPage(props) {
                    className="logInBtn">Log In</button>
                   </div>
             </>
-          </div>
+          </div> : null
+        }
         </>
-                  <LoginModal show={show}><LoginForm setUser={props.setUser}/></LoginModal>
+          <LoginForm show={show} onClose={() => setShow(false)} setUser={props.setUser}/>
       </main>
     </>
   );
