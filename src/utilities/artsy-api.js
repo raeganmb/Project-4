@@ -1,5 +1,5 @@
 const axios = require("axios");
-const logger = require("./log_console");
+const logger = require("../../testing/log_console");
 require("dotenv").config();
 // TODO
 // Remove ids and secret from prod
@@ -74,19 +74,21 @@ class ArtClient {
 	async getArtwork(params) {
 		await this.ensureValidSession();
 
-		let url = `https://api.artsy.net/api/artists`;
-		let resp = await axios.get(url, {
-			headers: this.headers,
-			params: params,
-		});
+		let baseUrl = `https://api.artsy.net/api/artworks`;
 
 		if (params.artwork_id) {
+			var resp = await axios.get(baseUrl + `/${params.artwork_id}`, {
+				headers: this.headers,
+			});
 			return this.parseArtwork(resp.data);
-		}
+		} else {
+			var resp = await axios.get(baseUrl, {
+				headers: this.headers,
+				params: params,
+			});
 
-		// TODO
-		// map object with parsing
-		return resp._embedded.artworks.map(this.parseArtwork);
+			return resp.data._embedded.artworks.map(this.parseArtwork);
+		}
 	}
 
 	async getArtist(params) {
@@ -135,8 +137,8 @@ class ArtClient {
 		return {
 			artwork_id: "artwork_id: String, retreive this specific artwork data",
 			artist_id: "artwork_id: String, retrive artworks by a given artist",
-			size: "Integer, number of items to retrieve",
-			offset: "integer, number of items to skip",
+			size: "size: Integer, number of items to retrieve",
+			offset: "offset: integer, number of items to skip",
 		};
 	}
 
@@ -160,18 +162,15 @@ class ArtClient {
 
 		res.id = artwork.id;
 		res.title = artwork.title;
-		res.category;
-		res.medium;
-		res.date;
-		res.addition_information;
+		res.category = artwork.category;
+		res.medium = artwork.medium;
+		res.date = artwork.date;
 		res.thumbnail;
 		res.image_details = {
 			image_versions: artwork.image_versions,
 			image_link: artwork._links.image,
 			thumbnail: artwork._links.thumbnail,
 		};
-		res.similar_artworks;
-		res.gene;
 
 		return res;
 	}
@@ -179,6 +178,4 @@ class ArtClient {
 
 const client = new ArtClient();
 
-module.exports = {
-	client,
-};
+module.exports = client;
