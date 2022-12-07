@@ -74,19 +74,21 @@ class ArtClient {
 	async getArtwork(params) {
 		await this.ensureValidSession();
 
-		let url = `https://api.artsy.net/api/artists`;
-		let resp = await axios.get(url, {
-			headers: this.headers,
-			params: params,
-		});
+		let baseUrl = `https://api.artsy.net/api/artworks`;
 
 		if (params.artwork_id) {
+			var resp = await axios.get(baseUrl + `/${params.artwork_id}`, {
+				headers: this.headers,
+			});
 			return this.parseArtwork(resp.data);
-		}
+		} else {
+			var resp = await axios.get(url, {
+				headers: this.headers,
+				params: params,
+			});
 
-		// TODO
-		// map object with parsing
-		return resp._embedded.artworks.map(this.parseArtwork);
+			return resp._embedded.artworks.map(this.parseArtwork);
+		}
 	}
 
 	async getArtist(params) {
@@ -170,8 +172,6 @@ class ArtClient {
 			image_link: artwork._links.image,
 			thumbnail: artwork._links.thumbnail,
 		};
-		res.similar_artworks;
-		res.gene;
 
 		return res;
 	}
@@ -179,6 +179,4 @@ class ArtClient {
 
 const client = new ArtClient();
 
-module.exports = {
-	client,
-};
+module.exports = client;
