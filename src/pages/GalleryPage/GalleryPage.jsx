@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import "./GalleryPage.css";
 
 export default function GalleryPage() {
   const slides = [
@@ -22,10 +23,11 @@ export default function GalleryPage() {
 
   return (
     <>
-      <div>Art Gallery</div>
-      <div style={containerStyles}>
-        <ImageSlider slides={slides} />
-      </div>
+        <div className="background-wrapper">
+          <div style={containerStyles}>
+            <ImageSlider slides={slides} />
+          </div>
+        </div>
     </>
   );
 }

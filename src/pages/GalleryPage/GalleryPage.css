@@ -1,0 +1,21 @@
+/* DESKTOP VIEW */
+
+.background-wrapper {
+  margin-top: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MOBILE VIEW */
+
+/* @media only screen and (max-width: 450px) {
+
+    .background-wrapper {
+        margin-top: 175px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+} */
