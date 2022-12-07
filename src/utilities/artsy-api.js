@@ -1,5 +1,5 @@
 const axios = require("axios");
-const logger = require("./log_console");
+const logger = require("../../testing/log_console");
 require("dotenv").config();
 // TODO
 // Remove ids and secret from prod
@@ -82,12 +82,12 @@ class ArtClient {
 			});
 			return this.parseArtwork(resp.data);
 		} else {
-			var resp = await axios.get(url, {
+			var resp = await axios.get(baseUrl, {
 				headers: this.headers,
 				params: params,
 			});
 
-			return resp._embedded.artworks.map(this.parseArtwork);
+			return resp.data._embedded.artworks.map(this.parseArtwork);
 		}
 	}
 
@@ -137,8 +137,8 @@ class ArtClient {
 		return {
 			artwork_id: "artwork_id: String, retreive this specific artwork data",
 			artist_id: "artwork_id: String, retrive artworks by a given artist",
-			size: "Integer, number of items to retrieve",
-			offset: "integer, number of items to skip",
+			size: "size: Integer, number of items to retrieve",
+			offset: "offset: integer, number of items to skip",
 		};
 	}
 
@@ -162,10 +162,9 @@ class ArtClient {
 
 		res.id = artwork.id;
 		res.title = artwork.title;
-		res.category;
-		res.medium;
-		res.date;
-		res.addition_information;
+		res.category = artwork.category;
+		res.medium = artwork.medium;
+		res.date = artwork.date;
 		res.thumbnail;
 		res.image_details = {
 			image_versions: artwork.image_versions,
