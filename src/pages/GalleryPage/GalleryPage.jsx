@@ -23,11 +23,13 @@ export default function GalleryPage() {
 
   return (
     <>
-        <div className="background-wrapper">
-          <div style={containerStyles}>
-            <ImageSlider slides={slides} />
-          </div>
+      <div className="background-wrapper">
+        <div style={containerStyles}>
+          <ImageSlider slides={slides} />
         </div>
+      </div>
+      <button>Show Similar Art</button>
+      <button>Remove From My Gallery</button>
     </>
   );
 }

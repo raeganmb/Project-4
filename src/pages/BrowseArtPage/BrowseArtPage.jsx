@@ -1,8 +1,10 @@
 import React from "react";
+import CollectionsLayout from "../../components/CollectionsLayout/CollectionsLayout.jsx";
+import "./BrowseArtPage.css";
+import { useState, useRef, useEffect } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
-import { useState, useEffect, useRef } from "react";
 
-export default function HomePage() {
+export default function BrowseArtPage() {
   const [loading, setLoading] = useState(true);
   const [href, setHref] = useState(null);
   const hrefFetchedRef = useRef(false);
@@ -21,8 +23,12 @@ export default function HomePage() {
 
   return (
     <>
-      <h1>Home Page</h1>
-      {loading ? <p>loading</p> : <img src={href} />}
+      <div>
+        <h1>BrowseArtPage</h1>
+        <img src={href} />
+      </div>
+      <button>Another Art</button>
+      <button type="submit">Save</button>
     </>
   );
 }
