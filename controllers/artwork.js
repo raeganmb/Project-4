@@ -26,9 +26,8 @@ async function getRandomArtwork(req, resp, next) {
 	let params = {
 		offset: Math.floor(Math.random() * 50),
 	};
-	console.log(params);
 	let result = await API.getArtwork(params);
-	console.log(result);
+
 	resp.send(result);
 }
 
