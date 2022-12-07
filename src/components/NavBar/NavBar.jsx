@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import * as userService from "../../utilities/users-service";
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-import { IconContext } from "react-icons";
+// import * as FaIcons from "react-icons/fa";
+// import * as AiIcons from "react-icons/ai";
+// import { IconContext } from "react-icons";
 import { NavData } from "./NavData";
 import "./NavBar.css";
 

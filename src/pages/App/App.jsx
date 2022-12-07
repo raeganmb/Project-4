@@ -35,7 +35,7 @@ function App() {
                 path="/signup"
                 element={<SignUpForm setUser={setUser} />}
               />
-              <Route path="/login" element={<LoginForm setUser={setUser} />} />
+              {/* <Route path="/login" element={<LoginForm setUser={setUser} />} /> */}
             </Routes>
           </>
         )}
