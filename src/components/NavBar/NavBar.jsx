@@ -33,7 +33,7 @@ export default function NavBar({ user, setUser }) {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
-            <li>{user && <span>Welcome, {user.name}</span>}</li>
+            <li className="welcome">{user && <span>Welcome,<br /> {user.name}</span>}</li>
             {NavData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
@@ -44,9 +44,11 @@ export default function NavBar({ user, setUser }) {
                 </li>
               );
             })}
+            <li className="logoutlink">
             <Link to="" onClick={handleLogOut} className="logout">
               Log Out
             </Link>
+            </li>
           </ul>
         </nav>
       </IconContext.Provider>

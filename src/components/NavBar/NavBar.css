@@ -1,6 +1,8 @@
+/* DESKTOP VIEW */
+
 .navbar {
   background-color: #836c55;
-  height: 80px;
+  height: 60px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -51,7 +53,7 @@
 }
 
 .nav-text a:hover {
-  background-color: #1a83ff;
+  background-color: #c4b6a7;
 }
 
 .nav-menu-items {
@@ -71,6 +73,127 @@ span {
   margin-left: 16px;
 }
 
+.logoutlink {
+  list-style: none;
+  text-align: center;
+  color: white;
+  padding: 55px 45px 15px 0px;
+}
+
 .logout {
   font-size: 20px;
 }
+
+a {
+  color: white;
+}
+
+.welcome {
+  font-size: 25px;
+  color: white;
+  list-style: none;
+  text-align: center;
+  padding: 15px 0px 15px;
+}
+
+/* MOBILE VIEW */
+
+/* @media only screen and (max-width: 450px) {
+
+  .navbar {
+    background-color: #836c55;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+  }
+  
+  .nav-menu {
+    background-color: #836c55;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 200ms;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+    transition: 200ms;
+  }
+  
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  
+  .nav-text a:hover {
+    background-color: #c4b6a7;
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }
+  
+  .navbar-toggle {
+    background-color: #836c55;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  span {
+    margin-left: 16px;
+  }
+  
+  .logoutlink {
+    list-style: none;
+    text-align: center;
+    color: white;
+    padding: 55px 45px 15px 0px;
+  }
+  
+  .logout {
+    font-size: 20px;
+  }
+  
+  a {
+    color: white;
+  }
+  
+  .welcome {
+    font-size: 25px;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 15px 0px 15px;
+  }
+
+} */
