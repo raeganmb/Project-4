@@ -6,7 +6,7 @@ import * as IoIcons from "react-icons/io";
 export const NavData = [
   {
     title: "Home",
-    path: "/",
+    path: "/home",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },

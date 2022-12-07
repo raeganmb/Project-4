@@ -7,7 +7,7 @@ import "./App.css";
 import GalleryPage from "../GalleryPage/GalleryPage";
 import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import MyCollectionsPage from "../MyCollectionsPage/MyCollectionsPage";
+import MyCollectionsPage from "../BrowseArtPage/BrowseArtPage";
 import HomePage from "../HomePage/HomePage";
 import DetailsPage from "../DetailsPage/DetailsPage";
 
