@@ -4,12 +4,17 @@ import "./AuthPage.css";
 // import LoginModal from "../../components/Modal/LoginModal";
 import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
 
 export default function AuthPage(props) {
   const [show, setShow] = useState(false)
+  const [showSignUp, setShowSignUp] = useState(false)
   function showModal() {
   setShow(show => !show)
   }
+function showSignUpModal() {
+  setShowSignUp(showSignUp => !showSignUp)
+}
 
   // function closeModal() {
   //   setShow(show = !show)
@@ -32,13 +37,18 @@ export default function AuthPage(props) {
               <div className="authBtnContatiner">
               <button onClick={() => {showModal()}}
                    className="logInBtn">Log In</button>
+                   <p>Don't have an account?</p>
+                   <button onClick={() => {showSignUpModal()}} className="signUpBtn">
+                    Sign Up Here!
+                   </button>
                   </div>
             </>
           </div> : null
         }
         </>
-          <LoginForm show={show} onClose={() => setShow(false)} setUser={props.setUser}/>
       </main>
+          <LoginForm show={show} onClose={() => setShow(false)} setUser={props.setUser}/>
+          <SignUpForm showSignUp={showSignUp} onClose={() => setShowSignUp(false)} setUser={props.setUser}/>
     </>
   );
 }

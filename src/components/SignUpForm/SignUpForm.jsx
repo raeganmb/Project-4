@@ -35,7 +35,10 @@ export default class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <div className="form-container">
+        <>
+        {this.props.showSignUp ? 
+        <>
+<div className="form-container">
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input
@@ -73,9 +76,13 @@ export default class SignUpForm extends Component {
               SIGN UP
             </button>
           </form>
+          <button onClick={this.props.onClose}>Cancel</button>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
-      </div>
+
+        </> : null }
+        </> 
+        </div>
     );
   }
 }
