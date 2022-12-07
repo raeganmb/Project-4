@@ -30,13 +30,13 @@ function App() {
         ) : (
           <>
             <AuthPage setUser={setUser} />
-            <Routes>
+            {/* <Routes>
               <Route
                 path="/signup"
                 element={<SignUpForm setUser={setUser} />}
               />
-              {/* <Route path="/login" element={<LoginForm setUser={setUser} />} /> */}
-            </Routes>
+              <Route path="/login" element={<LoginForm setUser={setUser} />} />
+            </Routes> */}
           </>
         )}
       </main>
