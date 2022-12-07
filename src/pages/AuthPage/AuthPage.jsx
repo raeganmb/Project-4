@@ -16,9 +16,6 @@ function showSignUpModal() {
   setShowSignUp(showSignUp => !showSignUp)
 }
 
-  // function closeModal() {
-  //   setShow(show = !show)
-  // }
 
   return (
     <>
@@ -31,7 +28,7 @@ function showSignUpModal() {
         </div>
 
         <>
-        {!show ?
+        {(!show && !showSignUp) ?
           <div>
             <>
               <div className="authBtnContatiner">
