@@ -23,16 +23,13 @@ async function getGallery(req, resp, next) {
 
 // remove artwork from the gallery
 async function removeArtwork(req, res, next) {
-	let gallery = await Gallery.find({ user_id: req.query.user_id }).populate(
-		"artworks"
-	);
-
-	resp.send(
-		gallery[0].artworks.map((artwork) => {
-			artwork["_id"] = artwork["_id"].toString();
-			return artwork;
-		})
-	);
+	try {
+		let dbQuery = await Gallery.find({ user_id: req.query.user_id }).populate(
+			"artworks"
+		);
+		let gallery = dbQuery[0];
+		console.log(gallery);
+	} catch (error) {}
 }
 
 module.exports = {
