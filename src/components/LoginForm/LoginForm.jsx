@@ -3,15 +3,15 @@ import * as FaIcons from "react-icons/fa";
 import { useState } from "react";
 import * as usersService from "../../utilities/users-service";
 import "./LoginForm.css"
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm(props) {
-
-
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
@@ -27,6 +27,7 @@ export default function LoginForm(props) {
       // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       props.setUser(user);
+      navigate("/home");
     } catch (err) {
       console.log(err);
       setError("Log In Failed - Try Again");

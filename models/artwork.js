@@ -8,6 +8,15 @@ const artworkSchema = new Schema({
 		type: String,
 		required: true,
 	},
+	title: String,
+	category: String,
+	medium: String,
+	date: String,
+	image_details: {
+		image_versions: [String],
+		image_link: { href: String },
+		thumbnail: { href: String },
+	},
 });
 
 module.exports = mongoose.model("Artwork", artworkSchema);

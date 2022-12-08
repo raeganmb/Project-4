@@ -4,7 +4,7 @@ const Artwork = require("../models/artwork");
 const Gallery = require("../models/gallery");
 const User = require("../models/user");
 const API = require("../src/utilities/artsy-api");
-const controller = "ARTWORK";
+const mongoose = require("mongoose");
 
 // get artwork data as json
 async function getArtwork(req, resp, next) {
@@ -22,12 +22,23 @@ async function saveArtwork(req, res, next) {
 	let artwork_def = {
 		artwork_id: req.query.artwork_id,
 	};
+
 	try {
-		let artwork = new Artwork(artwork_def);
+		// artwork
+		let dbQuery = await Artwork.find(artwork_def);
+
+		if (!dbQuery[0]) {
+			let artwork_data = await API.getArtwork(artwork_def);
+			artwork_data["artwork_id"] = artwork_data.id;
+			var artwork = new Artwork(artwork_data);
+		} else {
+			var artwork = dbQuery[0];
+		}
 		await artwork.save();
 
+		// gallery
 		var searchRes = await Gallery.find({
-			user_id: req.query.user_id,
+			user: new mongoose.Types.ObjectId(req.query.user_id),
 		});
 
 		gallery = searchRes[0];
