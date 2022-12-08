@@ -38,3 +38,18 @@ export async function getGalleryArt(user_id) {
 		return [];
 	}
 }
+
+export async function removeGalleryArt(user_id, artwork_id) {
+	try {
+		let params = {
+			user_id: user_id,
+			artwork_id: artwork_id,
+		};
+
+		var resp = await axios.get("http://localhost:3001/gallery", {
+			params: params,
+		});
+	} catch (error) {
+		console.log(error);
+	}
+}

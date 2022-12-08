@@ -4,6 +4,7 @@ import "./BrowseArtPage.css";
 import { useState, useRef, useEffect } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
 import { getUser } from "../../utilities/users-service.js";
+import { useCallback, useReducer } from "react";
 
 export default function BrowseArtPage() {
 	const [loading, setLoading] = useState(true);
@@ -18,16 +19,11 @@ export default function BrowseArtPage() {
 		setId(result[0].id);
 	}
 
-	function reloadPage() {
-		window.location.reload();
-	}
 	async function saveArt(event) {
 		event.preventDefault();
 		let artwork_id = event.target[0].value;
 		let user_id = getUser()._id;
 		apiService.saveArt(artwork_id, user_id);
-
-		window.location.reload();
 	}
 
 	useEffect(() => {
@@ -44,19 +40,24 @@ export default function BrowseArtPage() {
 			</div>
 			{!loading ? (
 				<div>
-					<button onClick={reloadPage}>Another Art</button>
+					<button onClick={getArt}>Another Art</button>
 					<form onSubmit={saveArt}>
 						<input
 							type="hidden"
 							name="artwork_id"
 							value={id}
 						></input>
-						<button type="submit">Save</button>
+						<button
+							type="submit"
+							onClick={getArt}
+						>
+							Save
+						</button>
 					</form>
 				</div>
 			) : (
 				<div>
-					<button onClick={reloadPage}>Another Art</button>
+					<button onClick={getArt}>Another Art</button>
 				</div>
 			)}
 		</>

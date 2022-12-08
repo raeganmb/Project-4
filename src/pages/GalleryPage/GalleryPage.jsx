@@ -32,6 +32,12 @@ export default function GalleryPage() {
 		let user = getUser()._id;
 		let result = await apiService.getGalleryArt(user);
 		console.log(result);
+		// setSlides[result]
+		// use the above to look at the result from the database and format the images in the components below
+	}
+
+	async function removeArtworkfromGallery() {
+		let user = getUser()._id;
 	}
 
 	useEffect(() => {
@@ -49,7 +55,7 @@ export default function GalleryPage() {
 			</div>
 			<div className="galleryButtons">
 				<button>Show Similar Art</button>
-				<button>Remove From My Gallery</button>
+				<button onClick={removeArtworkfromGallery}>Remove From My Gallery</button>
 			</div>
 			<BenchFooter />
 		</>
