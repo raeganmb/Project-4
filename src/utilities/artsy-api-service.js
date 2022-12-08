@@ -40,16 +40,18 @@ export async function getGalleryArt(user_id) {
 }
 
 export async function removeGalleryArt(user_id, artwork_id) {
+	console.log("removing gallery req from server");
 	try {
 		let params = {
 			user_id: user_id,
 			artwork_id: artwork_id,
 		};
 
-		var resp = await axios.get("http://localhost:3001/gallery", {
+		var resp = await axios.get("http://localhost:3001/gallery/delete", {
 			params: params,
 		});
 	} catch (error) {
 		console.log(error);
 	}
+	return;
 }

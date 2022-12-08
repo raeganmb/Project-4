@@ -19,8 +19,9 @@ const defaultSlides = [
 ];
 
 export default function GalleryPage() {
-	const [slides, setSlides] = useState(defaultSlides);
-	const refSlides = useRef(false);
+	const [artworks, setArtworks] = useState([]);
+	const loadingSlides = useRef(false);
+	const gotSlides = useRef(false);
 
 	const containerStyles = {
 		width: "500px",
@@ -29,29 +30,39 @@ export default function GalleryPage() {
 	};
 
 	async function getGallerySlides() {
+		gotSlides.current = false;
 		let user = getUser()._id;
 		let result = await apiService.getGalleryArt(user);
-		console.log(result);
-		// setSlides[result]
+		setArtworks(result);
+		gotSlides.current = true;
 		// use the above to look at the result from the database and format the images in the components below
 	}
 
 	async function removeArtworkfromGallery() {
 		let user = getUser()._id;
+		let artwork_id = "0";
+		await apiService.removeGalleryArt(user, artwork_id);
+		await getGallerySlides();
 	}
 
 	useEffect(() => {
-		if (refSlides.current) return;
-		refSlides.current = true;
+		if (loadingSlides.current) return;
+		loadingSlides.current = true;
 		getGallerySlides();
 	});
 
 	return (
 		<>
 			<div className="background-wrapper">
-				<div style={containerStyles}>
-					<ImageSlider slides={slides} />
-				</div>
+				{gotSlides ? (
+					<div style={containerStyles}>
+						<ImageSlider artworks={artworks} />
+					</div>
+				) : (
+					<div>
+						<p>Getting ur images</p>
+					</div>
+				)}
 			</div>
 			<div className="galleryButtons">
 				<button>Show Similar Art</button>
