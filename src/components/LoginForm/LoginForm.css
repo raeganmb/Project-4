@@ -3,8 +3,33 @@
 .form-container {
     margin: 0 30%;
     height: 50vh;
+    padding-top: 8px;
 }
 
+.logInForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.logInInputs {
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cancelContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancelBtn {
+    color: red;
+}
+
+.logInInfo {
+    margin-top: 50px;
+}
 
 
 

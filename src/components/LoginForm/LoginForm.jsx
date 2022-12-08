@@ -38,7 +38,12 @@ export default function LoginForm(props) {
       {props.show ? 
       <>
       <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
+        <form className="logInForm" autoComplete="off" onSubmit={handleSubmit}>
+          <div className="cancelContainer">
+          <a className="cancelBtn" onClick={props.onClose}>X</a>
+          </div>
+          <div className="logInInfo">
+          <div className="logInEmail logInInputs">
           <label>Email</label>
           <input
             placeholder=""
@@ -48,6 +53,8 @@ export default function LoginForm(props) {
             onChange={handleChange}
             required
           />
+          </div>
+          <div className="logInPassword logInInputs">
           <label>Password</label>
           <input
             type="password"
@@ -56,9 +63,10 @@ export default function LoginForm(props) {
             onChange={handleChange}
             required
           />
+          </div>
+          </div>
           <button type="submit">LOG IN</button>
         </form>
-          <button onClick={props.onClose}>Cancel</button>
       </div>
       <p className="error-message">&nbsp;{error}</p>
       </> : null }
