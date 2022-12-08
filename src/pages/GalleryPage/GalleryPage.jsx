@@ -57,7 +57,7 @@ export default function GalleryPage() {
 				<button>Show Similar Art</button>
 				<button onClick={removeArtworkfromGallery}>Remove From My Gallery</button>
 			</div>
-			<BenchFooter />
+			{/* <BenchFooter /> */}
 		</>
 	);
 }
