@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { signUp } from "../../utilities/users-service";
+import * as FaIcons from "react-icons/fa";
+import "./SignUpForm.css"
 
 export default class SignUpForm extends Component {
   state = {
@@ -39,8 +41,14 @@ export default class SignUpForm extends Component {
         <>
           {this.props.showSignUp ? (
             <>
-              <div className="form-container">
-                <form autoComplete="off" onSubmit={this.handleSubmit}>
+              <div className="form-container signUp-container">
+                <form className="signUpForm" autoComplete="off" onSubmit={this.handleSubmit}>
+                <div className="cancelContainer">
+          <a className="cancelBtn" onClick={this.props.onClose}><FaIcons.FaTimes /></a>
+          </div>
+          <h2 className="signUpTitle">Sign Up</h2>
+          <div className="signUpInfo">
+          <div className="signUpName signUpInputs">
                   <label>Name</label>
                   <input
                     type="text"
@@ -49,6 +57,8 @@ export default class SignUpForm extends Component {
                     onChange={this.handleChange}
                     required
                   />
+          </div>
+          <div className="signUpEmail signUpInputs">
                   <label>Email</label>
                   <input
                     type="email"
@@ -57,14 +67,18 @@ export default class SignUpForm extends Component {
                     onChange={this.handleChange}
                     required
                   />
-                  <label>Password</label>
-                  <input
-                    type="password"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                    required
-                  />
+          </div>
+          <div className="signUpPassword signUpInputs">
+            <label>Password</label>
+            <input
+            type="password"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+            required
+            />
+          </div>
+          <div className="signUpPasswordConfirm signUpInputs">
                   <label>Confirm</label>
                   <input
                     type="password"
@@ -73,18 +87,21 @@ export default class SignUpForm extends Component {
                     onChange={this.handleChange}
                     required
                   />
-                  <button
-                    type="submit"
-                    disabled={disable}
-                    onClick={this.reroute}
-                  >
-                    SIGN UP
-                  </button>
-                </form>
-                <button onClick={this.props.onClose}>Cancel</button>
-              </div>
-              <p className="error-message">&nbsp;{this.state.error}</p>
-            </>
+          </div>
+        </div>
+        <div className="signUpBtnContainer">
+          <button className="signUpBtnModal"
+          type="submit"
+          disabled={disable}
+          onClick={this.reroute}
+          >
+            SIGN UP
+          </button>
+        </div>
+      </form>
+    </div>
+    <p className="error-message">&nbsp;{this.state.error}</p>
+    </>
           ) : null}
         </>
       </div>

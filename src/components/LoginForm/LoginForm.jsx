@@ -1,5 +1,8 @@
+// LoginForm.jsx
+import * as FaIcons from "react-icons/fa";
 import { useState } from "react";
 import * as usersService from "../../utilities/users-service";
+import "./LoginForm.css"
 import { useNavigate } from "react-router-dom";
 
 export default function LoginForm(props) {
@@ -33,33 +36,44 @@ export default function LoginForm(props) {
 
   return (
     <div>
-      {props.show ? (
-        <>
-          <div className="form-container">
-            <form autoComplete="off" onSubmit={handleSubmit}>
-              <label>Email</label>
-              <input
-                type="text"
-                name="email"
-                value={credentials.email}
-                onChange={handleChange}
-                required
-              />
-              <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                value={credentials.password}
-                onChange={handleChange}
-                required
-              />
-              <button type="submit">LOG IN</button>
-            </form>
-            <button onClick={props.onClose}>Cancel</button>
+      {props.show ? 
+      <>
+      <div className="form-container">
+        <form className="logInForm" autoComplete="off" onSubmit={handleSubmit}>
+          <div className="cancelContainer">
+          <a className="cancelBtn" onClick={props.onClose}><FaIcons.FaTimes /></a>
           </div>
-          <p className="error-message">&nbsp;{error}</p>
-        </>
-      ) : null}
+          <h2 className="logInTitle">Log In</h2>
+          <div className="logInInfo">
+          <div className="logInEmail logInInputs">
+          <label>Email</label>
+          <input
+            placeholder=""
+            type="text"
+            name="email"
+            value={credentials.email}
+            onChange={handleChange}
+            required
+          />
+          </div>
+          <div className="logInPassword logInInputs">
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+            required
+          />
+          </div>
+          </div>
+          <div className="logInBtnContainer">
+          <button className="logInBtnModal" type="submit">LOG IN</button>
+          </div>
+        </form>
+      </div>
+      <p className="error-message">&nbsp;{error}</p>
+      </> : null }
     </div>
   );
 }

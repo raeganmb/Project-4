@@ -1,0 +1,95 @@
+/* DESKTOP VIEW */
+
+.signUpTitle {
+    text-align: left;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.signUp-container {
+    margin: 0 30%;
+    height: 70vh;
+    padding-top: 8px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.signUpInputs {
+   display: flex;
+   flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.signUpInputs label {
+    padding-bottom: 7px;
+}
+
+.signUpInputs input {
+    width: 95%;
+}
+
+.cancelContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+    margin-right: -10px;
+}
+
+.cancelBtn { 
+    color: darkgray;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cancelBtn:hover {
+    background-color: rgba(211, 211, 211, 0.611);
+    padding: 2px;
+    border-radius: 100%;
+}
+
+.signUpInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.signUpBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.signUpBtnModal {
+    background-color: #e6c783;
+   box-shadow:  0px 5.7884px 5.7884px rgba(0, 0, 0, 0.25);
+   border: 3px solid #e6c783;
+   width: 95%;
+   border-radius: 10px;
+}
+
+.signUpModal {
+    border-radius: 50px;
+    background-color: red;
+}
+
+
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 450px) {
+
+}
+    
