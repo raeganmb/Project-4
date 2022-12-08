@@ -3,9 +3,8 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/create", Controller.newGallery);
-router.get("/:gallery_id/delete", Controller.deleteGallery);
-router.get("/:gallery_id/:artwork_id/remove", Controller.removeArtwork);
-router.get("/:gallery_id/:artwork_id/add", Controller.addArtwork);
+// router.get("/:user_id", Controller.getGallery);
+router.get("/delete/:user_id:artwork_id", Controller.removeArtwork);
+router.get("/", Controller.getGallery);
 
-module.exports = { router };
+module.exports = router;

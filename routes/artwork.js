@@ -4,6 +4,6 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/random", Controller.getRandomArtwork);
+router.get("/save", Controller.saveArtwork);
 router.get("/:artwork_id", Controller.getArtwork);
-router.post("/:artwork_id/save", Controller.saveArtwork);
 module.exports = router;

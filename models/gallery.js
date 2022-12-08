@@ -11,13 +11,11 @@ const gallerySchema = new Schema(
 			ref: "User",
 			required: true,
 		},
-		artworks: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: "Artwork",
-				required: true,
-			},
-		],
+		artworks: {
+			type: [Schema.Types.ObjectId],
+			ref: "Artwork",
+			default: [],
+		},
 	},
 	{
 		timestamps: true,

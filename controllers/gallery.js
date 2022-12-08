@@ -2,55 +2,40 @@ const Gallery = require("../models/gallery");
 const controller = "GALLERY";
 
 // get a single gallery by ID
-async function getGallery(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
-}
+async function getGallery(req, resp, next) {
+	let gallery = await Gallery.find({ user_id: req.query.user_id }).populate(
+		"artworks"
+	);
+	console.log(
+		gallery[0].artworks.map((artwork) => {
+			artwork["_id"] = artwork["_id"].toString();
+			return artwork;
+		})
+	);
 
-// get a list of galleries associated with use
-async function getGalleries(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
-}
-
-// create a new gallery for the user
-async function newGallery(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
-}
-
-// delete a gallery from the user
-async function deleteGallery(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
-}
-
-// add artwork to the gallery
-async function addArtwork(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
+	resp.send(
+		gallery[0].artworks.map((artwork) => {
+			artwork["_id"] = artwork["_id"].toString();
+			return artwork;
+		})
+	);
 }
 
 // remove artwork from the gallery
 async function removeArtwork(req, res, next) {
-	res.send({
-		controller: controller,
-		url: req.originalUrl,
-		params: req.params,
-	});
+	let gallery = await Gallery.find({ user_id: req.query.user_id }).populate(
+		"artworks"
+	);
+
+	resp.send(
+		gallery[0].artworks.map((artwork) => {
+			artwork["_id"] = artwork["_id"].toString();
+			return artwork;
+		})
+	);
 }
+
+module.exports = {
+	getGallery,
+	removeArtwork,
+};
