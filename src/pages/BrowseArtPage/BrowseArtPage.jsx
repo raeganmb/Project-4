@@ -18,13 +18,16 @@ export default function BrowseArtPage() {
 		setId(result[0].id);
 	}
 
+	function reloadPage() {
+		window.location.reload();
+	}
 	async function saveArt(event) {
 		event.preventDefault();
 		let artwork_id = event.target[0].value;
 		let user_id = getUser()._id;
 		apiService.saveArt(artwork_id, user_id);
 
-		// redirect
+		window.location.reload();
 	}
 
 	useEffect(() => {
@@ -37,17 +40,25 @@ export default function BrowseArtPage() {
 		<>
 			<div>
 				<h1>BrowseArtPage</h1>
-				<img src={href} />
+				{loading ? <p>loading</p> : <img src={href} />}
 			</div>
-			<button>Another Art</button>
-			<form onSubmit={saveArt}>
-				<input
-					type="hidden"
-					name="artwork_id"
-					value={id}
-				></input>
-				<button type="submit">Save</button>
-			</form>
+			{!loading ? (
+				<div>
+					<button onClick={reloadPage}>Another Art</button>
+					<form onSubmit={saveArt}>
+						<input
+							type="hidden"
+							name="artwork_id"
+							value={id}
+						></input>
+						<button type="submit">Save</button>
+					</form>
+				</div>
+			) : (
+				<div>
+					<button onClick={reloadPage}>Another Art</button>
+				</div>
+			)}
 		</>
 	);
 }
