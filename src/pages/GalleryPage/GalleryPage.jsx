@@ -31,7 +31,7 @@ export default function GalleryPage() {
 	async function getGallerySlides() {
 		let user = getUser()._id;
 		let result = await apiService.getGalleryArt(user);
-		console.log(result.data);
+		console.log(result);
 	}
 
 	useEffect(() => {
