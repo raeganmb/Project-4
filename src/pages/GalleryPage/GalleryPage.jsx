@@ -1,6 +1,7 @@
 import React from "react";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import "./GalleryPage.css";
+import BenchFooter from "../../components/BenchFooter/BenchFooter";
 
 export default function GalleryPage() {
   const slides = [
@@ -28,8 +29,11 @@ export default function GalleryPage() {
           <ImageSlider slides={slides} />
         </div>
       </div>
+      <div className="galleryButtons">
       <button>Show Similar Art</button>
       <button>Remove From My Gallery</button>
+      </div>
+      <BenchFooter />
     </>
   );
 }

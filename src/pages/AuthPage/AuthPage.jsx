@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BenchFooter from "../../components/BenchFooter/BenchFooter";
 import "./AuthPage.css";
 import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
@@ -42,6 +43,7 @@ function showSignUpModal() {
           </div> : null
         }
         </>
+        <BenchFooter />
       </main>
           <LoginForm show={show} onClose={() => setShow(false)} setUser={props.setUser}/>
           <SignUpForm showSignUp={showSignUp} onClose={() => setShowSignUp(false)} setUser={props.setUser}/>

@@ -1,6 +1,7 @@
 import React from "react";
 import * as apiService from "../../utilities/artsy-api-service";
 import { useState, useEffect, useRef } from "react";
+const axios = require("axios");
 
 export default function HomePage() {
   const [loading, setLoading] = useState(true);
