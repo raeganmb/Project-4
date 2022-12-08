@@ -18,11 +18,10 @@ function App() {
       <main className="App">
         {user ? (
           <>
-          <div style={{ position: 'relative', zIndex: '1'}}>
-            <NavBar user={user} setUser={setUser} />
+            <div style={{ position: "relative", zIndex: "1" }}>
+              <NavBar user={user} setUser={setUser} />
             </div>
             <Routes>
-              <Route path="/" />
               <Route path="/home" element={<HomePage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/collections" element={<MyCollectionsPage />} />
@@ -32,13 +31,13 @@ function App() {
         ) : (
           <>
             <AuthPage setUser={setUser} />
-            {/* <Routes>
+            <Routes>
               <Route
                 path="/signup"
                 element={<SignUpForm setUser={setUser} />}
               />
               <Route path="/login" element={<LoginForm setUser={setUser} />} />
-            </Routes> */}
+            </Routes>
           </>
         )}
       </main>
