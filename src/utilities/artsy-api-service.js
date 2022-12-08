@@ -1,9 +1,8 @@
 const axios = require("axios");
 
-async function randomArt() {
-  const data = {};
+export async function randomArt() {
   try {
-    const res = await axios.get("htttp://localhost:3001/artwork/random", data);
+    const res = await axios.get("http://localhost:3001/artwork/random");
     return res.data;
   } catch (err) {
     console.log(err);
