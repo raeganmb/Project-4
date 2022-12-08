@@ -13,6 +13,8 @@
     margin: 0 30%;
     height: 50vh;
     padding-top: 8px;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .logInForm {
@@ -76,7 +78,10 @@
    border-radius: 10px;
 }
 
-
+.logInModal {
+    border-radius: 50px;
+    background-color: red;
+}
 
 
 
