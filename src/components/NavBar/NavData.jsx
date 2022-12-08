@@ -16,16 +16,4 @@ export const NavData = [
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
-  {
-    title: "Collections",
-    path: "/collections",
-    icon: <FaIcons.FaCartPlus />,
-    cName: "nav-text",
-  },
-  {
-    title: "Details",
-    path: "/details",
-    icon: <IoIcons.IoMdPeople />,
-    cName: "nav-text",
-  },
 ];
