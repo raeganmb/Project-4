@@ -7,13 +7,18 @@ import * as apiService from "../../utilities/artsy-api-service";
 export default function BrowseArtPage() {
   const [loading, setLoading] = useState(true);
   const [href, setHref] = useState(null);
+  const [id, setId] = useState(null);
   const hrefFetchedRef = useRef(false);
 
   async function getArt() {
     let result = await apiService.randomArt();
     setHref(result[0].image_details.thumbnail.href);
     setLoading(false);
+    setId(result[0].id);
+    console.log(result);
   }
+
+  async function saveArt(e) {}
 
   useEffect(() => {
     if (hrefFetchedRef.current) return;
@@ -28,7 +33,9 @@ export default function BrowseArtPage() {
         <img src={href} />
       </div>
       <button>Another Art</button>
-      <button type="submit">Save</button>
+      <form onSubmit={saveArt}>
+        <button type="submit">Save</button>
+      </form>
     </>
   );
 }
