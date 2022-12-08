@@ -1,22 +1,27 @@
 import { useState } from "react";
 import "./ImageSlider.css";
 
-export default function ImageSlider({ artworks }) {
+export default function ImageSlider({ artworks, setcurrentArtwork }) {
 	const [index, setIndex] = useState(0);
+
+	setcurrentArtwork(artworks[index]);
 
 	const previousSlide = (e) => {
 		const isFirstSlide = index === 0;
 		const newIndex = isFirstSlide ? artworks.length - 1 : index - 1;
+		setcurrentArtwork(artworks[newIndex]);
 		setIndex(newIndex);
 	};
 
 	const nextSlide = (e) => {
 		const isLastSlide = index === artworks.length - 1;
 		const newIndex = isLastSlide ? 0 : index + 1;
+		setcurrentArtwork(artworks[newIndex]);
 		setIndex(newIndex);
 	};
 
 	const goToSlide = (slideIndex) => {
+		setcurrentArtwork(artworks[slideIndex]);
 		setIndex(slideIndex);
 	};
 
