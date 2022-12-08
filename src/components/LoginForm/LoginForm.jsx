@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import * as usersService from "../../utilities/users-service";
+import "./LoginForm.css"
 
 export default function LoginForm(props) {
 
@@ -40,6 +41,7 @@ export default function LoginForm(props) {
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
           <input
+            placeholder=""
             type="text"
             name="email"
             value={credentials.email}

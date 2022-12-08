@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import BenchFooter from "../../components/BenchFooter/BenchFooter";
 import "./AuthPage.css";
 import { useState } from "react";
 import LoginForm from "../../components/LoginForm/LoginForm";
@@ -25,7 +23,6 @@ function showSignUpModal() {
           <div className="welcomemsg">
             <p>Welcome to your Virtual Art Gallery</p>
           </div>
-          <img className="authImage" src="https://news.artnet.com/app/news-upload/2019/04/EP-DiDonna-Kahlo-Me-and-My-Parrots-778x1024.jpg" alt="" />
         </div>
       
 
@@ -33,6 +30,7 @@ function showSignUpModal() {
         {(!show && !showSignUp) ?
           <div>
             <>
+			<img className="authImage" src="https://news.artnet.com/app/news-upload/2019/04/EP-DiDonna-Kahlo-Me-and-My-Parrots-778x1024.jpg" alt="" />
               <div className="authBtnContatiner">
               <button onClick={() => {showModal()}}
                    className="logInBtn">Log In</button>

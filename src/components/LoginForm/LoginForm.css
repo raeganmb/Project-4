@@ -1,0 +1,20 @@
+/* DESKTOP VIEW */
+
+.form-container {
+    margin: 0 30%;
+    height: 50vh;
+}
+
+
+
+
+
+
+
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width: 450px) {
+
+}
+    
