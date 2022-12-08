@@ -11,7 +11,7 @@ const app = express();
 
 app.use(function (req, res, next) {
 	// Website you wish to allow to connect
-	res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+	res.setHeader("Access-Control-Allow-Origin", "*");
 
 	// Request methods you wish to allow
 	res.setHeader(
@@ -40,9 +40,6 @@ app.use("/api/users", require("./routes/api/users"));
 // const artistRouter = require("./routes/artist");
 // const galleryRouter = require("./routes/gallery");
 const artworkRouter = require("./routes/artwork");
-const testRouter = require("./routes/test");
-// test route
-app.use("/testing", testRouter);
 
 // App routes
 app.use("/artwork", artworkRouter);

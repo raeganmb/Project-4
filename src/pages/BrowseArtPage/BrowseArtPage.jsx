@@ -3,39 +3,51 @@ import CollectionsLayout from "../../components/CollectionsLayout/CollectionsLay
 import "./BrowseArtPage.css";
 import { useState, useRef, useEffect } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
+import { getUser } from "../../utilities/users-service.js";
 
 export default function BrowseArtPage() {
-  const [loading, setLoading] = useState(true);
-  const [href, setHref] = useState(null);
-  const [id, setId] = useState(null);
-  const hrefFetchedRef = useRef(false);
+	const [loading, setLoading] = useState(true);
+	const [href, setHref] = useState("");
+	const [id, setId] = useState("");
+	const hrefFetchedRef = useRef(false);
 
-  async function getArt() {
-    let result = await apiService.randomArt();
-    setHref(result[0].image_details.thumbnail.href);
-    setLoading(false);
-    setId(result[0].id);
-    console.log(result);
-  }
+	async function getArt() {
+		let result = await apiService.randomArt();
+		setHref(result[0].image_details.thumbnail.href);
+		setLoading(false);
+		setId(result[0].id);
+	}
 
-  async function saveArt(e) {}
+	async function saveArt(event) {
+		event.preventDefault();
+		let artwork_id = event.target[0].value;
+		let user_id = getUser()._id;
+		apiService.saveArt(artwork_id, user_id);
 
-  useEffect(() => {
-    if (hrefFetchedRef.current) return;
-    hrefFetchedRef.current = true;
-    getArt();
-  }, []);
+		// redirect
+	}
 
-  return (
-    <>
-      <div>
-        <h1>BrowseArtPage</h1>
-        <img src={href} />
-      </div>
-      <button>Another Art</button>
-      <form onSubmit={saveArt}>
-        <button type="submit">Save</button>
-      </form>
-    </>
-  );
+	useEffect(() => {
+		if (hrefFetchedRef.current) return;
+		hrefFetchedRef.current = true;
+		getArt();
+	}, []);
+
+	return (
+		<>
+			<div>
+				<h1>BrowseArtPage</h1>
+				<img src={href} />
+			</div>
+			<button>Another Art</button>
+			<form onSubmit={saveArt}>
+				<input
+					type="hidden"
+					name="artwork_id"
+					value={id}
+				></input>
+				<button type="submit">Save</button>
+			</form>
+		</>
+	);
 }
