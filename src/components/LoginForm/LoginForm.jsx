@@ -1,5 +1,5 @@
 // LoginForm.jsx
-
+import * as FaIcons from "react-icons/fa";
 import { useState } from "react";
 import * as usersService from "../../utilities/users-service";
 import "./LoginForm.css"
@@ -40,8 +40,9 @@ export default function LoginForm(props) {
       <div className="form-container">
         <form className="logInForm" autoComplete="off" onSubmit={handleSubmit}>
           <div className="cancelContainer">
-          <a className="cancelBtn" onClick={props.onClose}>X</a>
+          <a className="cancelBtn" onClick={props.onClose}><FaIcons.FaTimes /></a>
           </div>
+          <h2 className="logInTitle">Log In</h2>
           <div className="logInInfo">
           <div className="logInEmail logInInputs">
           <label>Email</label>
@@ -65,7 +66,9 @@ export default function LoginForm(props) {
           />
           </div>
           </div>
-          <button type="submit">LOG IN</button>
+          <div className="logInBtnContainer">
+          <button className="logInBtnModal" type="submit">LOG IN</button>
+          </div>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
