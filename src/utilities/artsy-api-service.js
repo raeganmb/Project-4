@@ -23,3 +23,18 @@ export async function saveArt(artwork_id, user_id) {
 		console.log(error);
 	}
 }
+
+export async function getGalleryArt(user_id) {
+	try {
+		let params = {
+			user_id: user_id,
+		};
+		var resp = await axios.get("http://localhost:3001/gallery", {
+			params: params,
+		});
+		return resp.data;
+	} catch (error) {
+		console.log(error);
+		return [];
+	}
+}

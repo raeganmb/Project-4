@@ -38,11 +38,12 @@ app.use("/api/users", require("./routes/api/users"));
 
 // routers
 // const artistRouter = require("./routes/artist");
-// const galleryRouter = require("./routes/gallery");
+const galleryRouter = require("./routes/gallery");
 const artworkRouter = require("./routes/artwork");
 
 // App routes
 app.use("/artwork", artworkRouter);
+app.use("/gallery", galleryRouter);
 
 // Client serving
 app.get("/*", function (req, res) {
