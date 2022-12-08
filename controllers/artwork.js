@@ -22,10 +22,21 @@ async function saveArtwork(req, res, next) {
 	let artwork_def = {
 		artwork_id: req.query.artwork_id,
 	};
+
 	try {
-		let artwork = new Artwork(artwork_def);
+		// artwork
+		let dbQuery = await Artwork.find(artwork_def);
+
+		if (!dbQuery[0]) {
+			let artwork_data = await API.getArtwork(artwork_def);
+			artwork_data["artwork_id"] = artwork_data.id;
+			var artwork = new Artwork(artwork_data);
+		} else {
+			var artwork = dbQuery[0];
+		}
 		await artwork.save();
 
+		// gallery
 		var searchRes = await Gallery.find({
 			user_id: req.query.user_id,
 		});
