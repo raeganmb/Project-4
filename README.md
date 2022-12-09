@@ -42,16 +42,20 @@ UXDI team: Karishma Jani and Nick Collett
 
 Welcome to Artspiration:
 
-<img src="https://i.ibb.co/TMKmhL6/Screen-Shot-2022-12-09-at-10-53-46-AM.png" alt="Screen-Shot-2022-12-09-at-10-53-46-AM" width="1000">
+<img src="https://i.ibb.co/TMKmhL6/Screen-Shot-2022-12-09-at-10-53-46-AM.png" width="1000">
 
 Sign Up and Log In:
 
-<img src="https://i.ibb.co/HqBsDGD/Screen-Shot-2022-12-09-at-10-55-26-AM.png" alt="Screen-Shot-2022-12-09-at-10-55-26-AM" width="500"><img src="https://i.ibb.co/D9jFFnj/Screen-Shot-2022-12-09-at-10-56-00-AM.png" alt="Screen-Shot-2022-12-09-at-10-56-00-AM" width="500">
+<img src="https://i.ibb.co/HqBsDGD/Screen-Shot-2022-12-09-at-10-55-26-AM.png" width="500"><img src="https://i.ibb.co/D9jFFnj/Screen-Shot-2022-12-09-at-10-56-00-AM.png"width="500">
+
+Random Artspiration and Gallery View:
+
+<img src="https://i.ibb.co/whrQJ0M/image.png" width="500"><img src="https://i.ibb.co/zPwH9mw/image-1.png" width="500">
 
 
 Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
 
-<img src="https://i.ibb.co/HKwkB25/Screen-Shot-2022-12-09-at-10-09-28-AM.png" alt="Screen-Shot-2022-12-09-at-10-09-28-AM" width="500"><img src="https://i.ibb.co/VmdVkpc/Screen-Shot-2022-12-09-at-10-12-25-AM.png" alt="Screen-Shot-2022-12-09-at-10-12-25-AM" width="500">
+<img src="https://i.ibb.co/HKwkB25/Screen-Shot-2022-12-09-at-10-09-28-AM.png" width="500"><img src="https://i.ibb.co/VmdVkpc/Screen-Shot-2022-12-09-at-10-12-25-AM.png" width="500">
 
 
 ## Future Enhancements and Icebox Items
