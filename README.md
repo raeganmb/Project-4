@@ -58,7 +58,7 @@ Or view in Gallery Mode:
 
 Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
 
-<img src="" width="500"><img src="" width="500">
+<img src="https://i.ibb.co/HKwkB25/Screen-Shot-2022-12-09-at-10-09-28-AM.png" alt="Screen-Shot-2022-12-09-at-10-09-28-AM" width="500"><img src="https://i.ibb.co/VmdVkpc/Screen-Shot-2022-12-09-at-10-12-25-AM.png" alt="Screen-Shot-2022-12-09-at-10-12-25-AM" width="500">
 
 
 ## Future Enhancements and Icebox Items
