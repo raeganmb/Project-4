@@ -34,12 +34,12 @@ export default function BrowseArtPage() {
 
 	return (
 		<>
-			<div>
-				<h1>Here is your Random Artspiration:</h1>
-				{loading ? <p>loading</p> : <img src={href} className="browseImg"/>}
+			<div className="browseContainer">
+				<h1 className="browseTitle">Here is your Random Artspiration:</h1>
+				{!loading ? <p>Loading</p> : <img src={href} className="browseImg"/>}
 			</div>
 			{!loading ? (
-				<div>
+				<div className="browseBtn">
 					<button onClick={getArt}>More Artspiration!</button>
 					<form className="formBtn" onSubmit={saveArt}>
 						<input
