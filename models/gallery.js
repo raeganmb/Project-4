@@ -5,21 +5,20 @@ const artworkSchema = require("./artwork");
 const bcrypt = require("bcrypt");
 
 const gallerySchema = new Schema(
-	{
-		user: {
-			type: Schema.Types.ObjectId,
-			ref: "User",
-			required: true,
-		},
-		artworks: {
-			type: [Schema.Types.ObjectId],
-			ref: "Artwork",
-			default: [],
-		},
-	},
-	{
-		timestamps: true,
-	}
+  {
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+    artworks: {
+      type: [Schema.Types.ObjectId],
+      ref: "Artwork",
+      default: [],
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
 module.exports = mongoose.model("Gallery", gallerySchema);

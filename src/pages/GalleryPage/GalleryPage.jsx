@@ -62,7 +62,7 @@ export default function GalleryPage() {
     if (loadingSlides.current) return;
     loadingSlides.current = true;
     getGallerySlides();
-  });
+  }, []);
 
   return (
     <>
