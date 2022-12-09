@@ -10,7 +10,7 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 import BrowseArtPage from "../BrowseArtPage/BrowseArtPage";
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(getUser());
   return (
     <>
       <main className="App">
