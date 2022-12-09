@@ -42,7 +42,7 @@ UXDI team: Karishma Jani and Nick Collett
 
 Welcome to Artspiration:
 
-<img src=https://i.ibb.co/TMKmhL6/Screen-Shot-2022-12-09-at-10-53-46-AM.png" width="1000">
+<img src="https://i.ibb.co/TMKmhL6/Screen-Shot-2022-12-09-at-10-53-46-AM.png" width="1000">
 
 Sign Up and Log In:
                                                                                         
