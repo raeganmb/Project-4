@@ -36,7 +36,7 @@ export default function BrowseArtPage() {
 		<>
 			<div className="browseContainer">
 				<h1 className="browseTitle">Here is your Random Artspiration:</h1>
-				{!loading ? <p>Loading</p> : <img src={href} className="browseImg"/>}
+				{loading ? <p>Loading</p> : <img src={href} className="browseImg"/>}
 			</div>
 			{!loading ? (
 				<div className="browseBtn">

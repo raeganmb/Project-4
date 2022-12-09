@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
 import { getUser } from "../../utilities/users-service.js";
 import { useNavigate } from "react-router-dom";
+import { FaBlackTie } from "react-icons/fa";
 
 export default function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
