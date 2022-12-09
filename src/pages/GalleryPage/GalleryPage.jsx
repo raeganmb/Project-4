@@ -50,8 +50,9 @@ export default function GalleryPage() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    await removeArtworkfromGallery();
-    await getGallerySlides();
+    removeArtworkfromGallery();
+    getGallerySlides();
+    navigate("/home");
   }
 
   async function routeToBrowse() {
