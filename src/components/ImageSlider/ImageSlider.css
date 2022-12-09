@@ -11,7 +11,7 @@
   transform: translate(0, -50%);
   left: 25px;
   font-size: 40px;
-  color: #fff;
+  color: #d3c1ae;
   z-index: 1;
   cursor: pointer;
 }
@@ -22,7 +22,7 @@
   transform: translate(0, -50%);
   right: 25px;
   font-size: 40px;
-  color: #fff;
+  color: #d3c1ae;
   z-index: 1;
   cursor: pointer;
 }

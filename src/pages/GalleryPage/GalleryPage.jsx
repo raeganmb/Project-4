@@ -52,8 +52,9 @@ export default function GalleryPage() {
 	});
 
 	return (
-		<>
+		<div className="galleryBench">
 			<div className="background-wrapper">
+				<h2 className="galleryTitle">Gallery</h2>
 				{gotSlides ? (
 					<div style={containerStyles}>
 						<ImageSlider
@@ -63,7 +64,7 @@ export default function GalleryPage() {
 					</div>
 				) : (
 					<div>
-						<p>Getting ur images</p>
+						<p>Getting your images</p>
 					</div>
 				)}
 			</div>
@@ -71,6 +72,9 @@ export default function GalleryPage() {
 				<button onClick={handleSubmit}>Remove From My Gallery</button>
 			</div>
 			{/* <BenchFooter /> */}
-		</>
+			<div>
+			<img src="https://i.ibb.co/qjKWPTG/desktopbench.png" className="galleryImage"/>
+			</div>
+		</div>
 	);
 }
