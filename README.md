@@ -85,5 +85,5 @@ Here are some shots of our original wireframe and application inspiration! Hopef
 
 ## Other Links
 
-[Trello Board]([link](https://trello.com/b/YKODrWG0/project-4))
-[Entity Relationship Diagram (ERD)](https://lucid.app/lucidchart/2cb2003a-4c29-44f5-bfb5-f86fa41c1d12/edit?viewport_loc=-562%2C110%2C1685%2C760%2C0_0&invitationId=inv_ea1ee21d-fbcf-489b-b279-8572872db527)
+- [Trello Board](https://trello.com/b/YKODrWG0/project-4)
+- [Entity Relationship Diagram (ERD)](https://lucid.app/lucidchart/2cb2003a-4c29-44f5-bfb5-f86fa41c1d12/edit?viewport_loc=-562%2C110%2C1685%2C760%2C0_0&invitationId=inv_ea1ee21d-fbcf-489b-b279-8572872db527)
