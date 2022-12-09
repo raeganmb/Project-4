@@ -28,6 +28,11 @@
   text-align: center;
 }
 
+.galleryButtons {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
 /* MOBILE VIEW */
 
 /* @media only screen and (max-width: 450px) {
