@@ -56,6 +56,10 @@ Or view in Gallery Mode:
 <img src="" width="500"><img src="" width="500">
 
 
+Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
+
+<img src="" width="500"><img src="" width="500">
+
 
 ## Future Enhancements and Icebox Items
 
