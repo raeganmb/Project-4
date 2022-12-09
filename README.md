@@ -48,14 +48,6 @@ Sign Up and Log In:
 
 <img src="https://i.ibb.co/HqBsDGD/Screen-Shot-2022-12-09-at-10-55-26-AM.png" alt="Screen-Shot-2022-12-09-at-10-55-26-AM" width="500"><img src="https://i.ibb.co/D9jFFnj/Screen-Shot-2022-12-09-at-10-56-00-AM.png" alt="Screen-Shot-2022-12-09-at-10-56-00-AM" width="500">
 
-Home Page/Random Art Generator:
-
-<img src="" width="1000">
-
-View your artwork in Gallery Mode:
-
-<img src="" width="1000">
-
 
 Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
 
