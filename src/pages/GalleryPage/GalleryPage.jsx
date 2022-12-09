@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
 import { getUser } from "../../utilities/users-service.js";
 import { useNavigate } from "react-router-dom";
+import { FaBlackTie } from "react-icons/fa";
 
 export default function GalleryPage() {
   const [artworks, setArtworks] = useState([]);
@@ -65,8 +66,9 @@ export default function GalleryPage() {
   }, []);
 
   return (
-    <>
+    <div className="galleryBench">
       <div className="background-wrapper">
+	  <h2 className="galleryTitle">Gallery</h2>
         {gotSlides ? (
           !isEmptySlide ? (
             <div style={containerStyles}>
@@ -80,7 +82,7 @@ export default function GalleryPage() {
           )
         ) : (
           <div>
-            <p>Getting ur images</p>
+            <p>Getting your images</p>
           </div>
         )}
       </div>
@@ -89,7 +91,10 @@ export default function GalleryPage() {
           <button type="submit">Remove From My Gallery</button>
         </form>
       </div>
-      {/* <BenchFooter /> */}
-    </>
+	  <div>
+			<img src="https://i.ibb.co/qjKWPTG/desktopbench.png" className="galleryImage"/>
+			</div>
+
+    </div>
   );
 }

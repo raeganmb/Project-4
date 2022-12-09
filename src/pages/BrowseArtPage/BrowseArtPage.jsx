@@ -32,27 +32,33 @@ export default function BrowseArtPage() {
     getArt();
   }, []);
 
-  return (
-    <>
-      <div>
-        <h1>Here is your Random Artspiration:</h1>
-        {loading ? <p>loading</p> : <img src={href} />}
-      </div>
-      {!loading ? (
-        <div>
-          <button onClick={getArt}>More Artspiration!</button>
-          <form className="formBtn" onSubmit={saveArt}>
-            <input type="hidden" name="artwork_id" value={id}></input>
-            <button type="submit" onClick={getArt}>
-              Save to my Gallery
-            </button>
-          </form>
-        </div>
-      ) : (
-        <div>
-          <button onClick={getArt}>Random Artspiration</button>
-        </div>
-      )}
-    </>
-  );
-}
+	return (
+		<>
+			<div className="browseContainer">
+				<h1 className="browseTitle">Here is your Random Artspiration:</h1>
+				{loading ? <p>Loading</p> : <img src={href} className="browseImg"/>}
+			</div>
+			{!loading ? (
+				<div className="browseBtn">
+					<button onClick={getArt}>More Artspiration!</button>
+					<form className="formBtn" onSubmit={saveArt}>
+						<input
+							type="hidden"
+							name="artwork_id"
+							value={id}
+						></input>
+						<button
+							type="submit"
+							onClick={getArt}
+						>
+							Save to my Gallery
+						</button>
+					</form>
+				</div>
+			) : (
+				<div>
+					<button onClick={getArt}>Random Artspiration</button>
+				</div>
+			)}
+		</>
+	);
