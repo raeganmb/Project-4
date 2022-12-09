@@ -6,7 +6,10 @@
 
 Welcome to Artspiration, your personal virtual art gallery!
 
-Sign up and login in to our randomized art generator and become "Artspired" by art styles, mediums, and artists you may not have explored before.  Click "Artspire me again!" to have a new piece of artwork generated.  Like what you see?  Save your favourite pieces to your gallery and view them in gallery mode!
+Sign up and login in to our randomized art generator and become "Artspired" by art styles, mediums, and artists you may not have explored before.  Click "More Artspiration!" to have a new piece of artwork generated.  
+
+Like what you see?  Save your favourite pieces to your gallery and view them in gallery mode!  Remove pieces of art from your gallery if you change your mind.
+
 
 ## Try it out!
 
@@ -15,18 +18,20 @@ Sign up and login in to our randomized art generator and become "Artspired" by a
 
 ## Authors
 
-- CJ Pak
-- Naser 
-- Raegan Boucher
-- Saad Khan
+- [CJ Pak](https://github.com/chanjongpak)
+- [Naser](https://github.com/nasaveli) 
+- [Raegan Boucher](https://github.com/raeganmb)
+- [Saad Khan](https://github.com/ssjkhan)
 
 UXDI team: Karishma Jani and Nick Collett
+
 
 ## Tech Stack
 
 **Client:** HTML, CSS, JavaScript, React
 **Server:** Node, Express
 **Deployed with:** Heroku
+
 
 ## Screenshots
 
@@ -66,12 +71,13 @@ Or view in Gallery Mode:
 ## Project Take-Aways
 
 - React was a tricky beast!  Integrating the React frontend and Node/Express backend and using the Artsy API proved to be a large and time-consuming task. We were forced to reimagine our application throughout the week in order to meet project requirements while also producing a fun and sensical application for our users!  This project required a ton of communication, collaboration, flexibility, and creativity.
-- Building out React applications seems like it would be a bit easier by building in order of user flow.  Building in piecemeal ended up giving us lots code for really cool features... that we did not end up using.  Learning moment!!
+- Building out React applications seems like it would be a bit easier by building in order of user flow.  Building in piecemeal ended up giving us lots of code for really cool features... that we did not end up using.  Learning moment!!
 
 
 ## Project Link
 
 [Click Here!](link)
+
 
 ## Other Links
 
