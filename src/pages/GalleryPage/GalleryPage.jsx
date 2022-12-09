@@ -50,6 +50,7 @@ export default function GalleryPage() {
   }
 
   async function handleSubmit(event) {
+    event.preventDefault();
     await removeArtworkfromGallery();
     await getGallerySlides();
   }
@@ -62,7 +63,7 @@ export default function GalleryPage() {
     if (loadingSlides.current) return;
     loadingSlides.current = true;
     getGallerySlides();
-  });
+  }, []);
 
   return (
     <div className="galleryBench">

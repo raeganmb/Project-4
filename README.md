@@ -6,9 +6,10 @@
 
 Welcome to Artspiration, your personal virtual art gallery!
 
-Once you have signed up and logged in, you are able to search for artwork by artist, genre, or artwork title.  While browsing through your search results, you can "heart" your favourite pieces to add them to your own artwork collections.  You can also browse through your collections, or view them in "Gallery Mode", as well as gain valuable information about the artwork and artists in your collections. 
+Sign up and login in to our randomized art generator and become "Artspired" by art styles, mediums, and artists you may not have explored before.  Click "More Artspiration!" to have a new piece of artwork generated.  
 
-We hope you also enjoy suggested pieces of art based on your searches and collections as well as our "Artwork of the Day" presented on our Home Page.
+Like what you see?  Save your favourite pieces to your gallery and view them in gallery mode!  Remove pieces of art from your gallery if you change your mind.
+
 
 ## Try it out!
 
@@ -17,18 +18,20 @@ We hope you also enjoy suggested pieces of art based on your searches and collec
 
 ## Authors
 
-- CJ Pak
-- Naser 
-- Raegan Boucher
-- Saad Khan
+- [CJ Pak](https://github.com/chanjongpak)
+- [Naser](https://github.com/nasaveli) 
+- [Raegan Boucher](https://github.com/raeganmb)
+- [Saad Khan](https://github.com/ssjkhan)
 
 UXDI team: Karishma Jani and Nick Collett
+
 
 ## Tech Stack
 
 **Client:** HTML, CSS, JavaScript, React
 **Server:** Node, Express
 **Deployed with:** Heroku
+
 
 ## Screenshots
 
@@ -53,25 +56,34 @@ Or view in Gallery Mode:
 <img src="" width="500"><img src="" width="500">
 
 
-## Example Code
+Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
 
-Example taken from ________ - ____________:
+<img src="https://i.ibb.co/HKwkB25/Screen-Shot-2022-12-09-at-10-09-28-AM.png" alt="Screen-Shot-2022-12-09-at-10-09-28-AM" width="500"><img src="https://i.ibb.co/VmdVkpc/Screen-Shot-2022-12-09-at-10-12-25-AM.png" alt="Screen-Shot-2022-12-09-at-10-12-25-AM" width="500">
 
-```
-example code here
-```
 
 ## Future Enhancements and Icebox Items
 
-- AAU,
-- AAU,
+- AAU, I would like to view my gallery on one page in a pinterest-style layout
+- AAU, I would like to have multiple galleries/collections and would like to be able to name them
+- AAU, I would like a "details" page for saved artwork to see more information (such as artist, medium, related works, artwork details, etc.)
+- AAU, I want to add my own images/digital art to my galleries
+- AAU, I want to be able to download artwork from my galleries with one button
+- AAU, I would like to have a note taking function in my galleries or for each piece of artwork
+- AAU, I would like to be able to search for artwork by artist or art style/medium
+
+
+## Project Take-Aways
+
+- React was a tricky beast!  Integrating the React frontend and Node/Express backend and using the Artsy API proved to be a large and time-consuming task. We were forced to reimagine our application throughout the week in order to meet project requirements while also producing a fun and sensical application for our users!  This project required a ton of communication, collaboration, flexibility, and creativity.
+- Building out React applications seems like it would be a bit easier by building in order of user flow.  Building in piecemeal ended up giving us lots of code for really cool features... that we did not end up using.  Learning moment!!
 
 
 ## Project Link
 
 [Click Here!](link)
 
+
 ## Other Links
 
-[Trello Board](link)
-[Entity Relationship Diagram (ERD)](link)
+- [Trello Board](https://trello.com/b/YKODrWG0/project-4)
+- [Entity Relationship Diagram (ERD)](https://lucid.app/lucidchart/2cb2003a-4c29-44f5-bfb5-f86fa41c1d12/edit?viewport_loc=-562%2C110%2C1685%2C760%2C0_0&invitationId=inv_ea1ee21d-fbcf-489b-b279-8572872db527)

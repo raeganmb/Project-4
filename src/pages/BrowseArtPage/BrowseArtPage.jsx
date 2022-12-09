@@ -7,30 +7,30 @@ import { getUser } from "../../utilities/users-service.js";
 import { useCallback, useReducer } from "react";
 
 export default function BrowseArtPage() {
-	const [loading, setLoading] = useState(true);
-	const [href, setHref] = useState("");
-	const [id, setId] = useState("");
-	const hrefFetchedRef = useRef(false);
+  const [loading, setLoading] = useState(true);
+  const [href, setHref] = useState("");
+  const [id, setId] = useState("");
+  const hrefFetchedRef = useRef(false);
 
-	async function getArt() {
-		let result = await apiService.randomArt();
-		setHref(result[0].image_details.thumbnail.href);
-		setLoading(false);
-		setId(result[0].id);
-	}
+  async function getArt() {
+    let result = await apiService.randomArt();
+    setHref(result[0].image_details.thumbnail.href);
+    setLoading(false);
+    setId(result[0].id);
+  }
 
-	async function saveArt(event) {
-		event.preventDefault();
-		let artwork_id = event.target[0].value;
-		let user_id = getUser()._id;
-		apiService.saveArt(artwork_id, user_id);
-	}
+  async function saveArt(event) {
+    event.preventDefault();
+    let artwork_id = event.target[0].value;
+    let user_id = getUser()._id;
+    apiService.saveArt(artwork_id, user_id);
+  }
 
-	useEffect(() => {
-		if (hrefFetchedRef.current) return;
-		hrefFetchedRef.current = true;
-		getArt();
-	}, []);
+  useEffect(() => {
+    if (hrefFetchedRef.current) return;
+    hrefFetchedRef.current = true;
+    getArt();
+  }, []);
 
 	return (
 		<>
@@ -62,4 +62,3 @@ export default function BrowseArtPage() {
 			)}
 		</>
 	);
-}
