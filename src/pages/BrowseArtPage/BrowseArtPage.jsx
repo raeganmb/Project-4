@@ -35,13 +35,13 @@ export default function BrowseArtPage() {
 	return (
 		<>
 			<div>
-				<h1>BrowseArtPage</h1>
+				<h1>Here is your Random Artspiration:</h1>
 				{loading ? <p>loading</p> : <img src={href} />}
 			</div>
 			{!loading ? (
 				<div>
-					<button onClick={getArt}>Another Art</button>
-					<form onSubmit={saveArt}>
+					<button onClick={getArt}>More Artspiration!</button>
+					<form className="formBtn" onSubmit={saveArt}>
 						<input
 							type="hidden"
 							name="artwork_id"
@@ -51,13 +51,13 @@ export default function BrowseArtPage() {
 							type="submit"
 							onClick={getArt}
 						>
-							Save
+							Save to my Gallery
 						</button>
 					</form>
 				</div>
 			) : (
 				<div>
-					<button onClick={getArt}>Another Art</button>
+					<button onClick={getArt}>Random Artspiration</button>
 				</div>
 			)}
 		</>
