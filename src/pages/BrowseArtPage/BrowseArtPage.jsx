@@ -4,7 +4,6 @@ import "./BrowseArtPage.css";
 import { useState, useRef, useEffect } from "react";
 import * as apiService from "../../utilities/artsy-api-service";
 import { getUser } from "../../utilities/users-service.js";
-import { useCallback, useReducer } from "react";
 
 export default function BrowseArtPage() {
   const [loading, setLoading] = useState(true);
