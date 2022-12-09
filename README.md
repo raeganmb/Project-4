@@ -13,7 +13,7 @@ Like what you see?  Save your favourite pieces to your gallery and view them in 
 
 ## Try it out!
 
-[Click Here!](link)
+[Click Here!](https://project4-artspiration.herokuapp.com/)
 
 
 ## Authors
@@ -32,6 +32,11 @@ UXDI team: Karishma Jani and Nick Collett
 **Server:** Node, Express
 **Deployed with:** Heroku
 
+## Tech Features
+
+- JSON Web Token Authentication
+- API calls using Artsy API
+
 
 ## Screenshots
 
@@ -43,17 +48,13 @@ Sign Up and Log In:
 
 <img src="" width="500"><img src="" width="500">
 
-Home Page and Search Function:
+Home Page/Random Art Generator:
 
-<img src="" width="500"><img src="" width="500">
+<img src="" width="1000">
 
-View your Art Collections:
+View your artwork in Gallery Mode:
 
-<img src="" width="500"><img src="" width="500">
-
-Or view in Gallery Mode:
-
-<img src="" width="500"><img src="" width="500">
+<img src="" width="1000">
 
 
 Here are some shots of our original wireframe and application inspiration! Hopefully, one day soon, we will be able to implement more of this design and more of these features (see below for future enhancements):
@@ -80,7 +81,7 @@ Here are some shots of our original wireframe and application inspiration! Hopef
 
 ## Project Link
 
-[Click Here!](link)
+[Click Here!](https://project4-artspiration.herokuapp.com/)
 
 
 ## Other Links
